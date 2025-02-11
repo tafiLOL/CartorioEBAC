@@ -130,7 +130,8 @@ int main()
 		printf ("ESCOLHA A OPÇÃO DESEJADA DO MENU: \n\n");
     	printf ("\t1 - Registrar nomes\n\n");
     	printf ("\t2 - Consultar nomes\n\n");
-    	printf ("\t3 - Deletar nomes\n\n\n");
+    	printf ("\t3 - Deletar nomes\n\n");
+    	printf ("\t4 - Sair do sistema\n\n");
     	printf("Digite sua opção:");
     
     	scanf ("%d", &opcao); // escaneia oque foi digitado e atribui á variavel opção
@@ -150,6 +151,12 @@ int main()
     		case 3:
     			deletar();
 				break;
+				
+			case 4:
+				printf("Obrigado por acessar!");
+				return 0;
+				break;
+				
 				
 			default: // default no CASE é como se fosse um NULL
 				printf("opção inexistente, tente novamente!\n");
