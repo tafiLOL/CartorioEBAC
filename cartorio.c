@@ -136,7 +136,7 @@ int main()
      {
 	 system("cls"); //vai limpar a tela para retomar do começo
 
-     setlocale(LC_ALL,"Portuguese_Brazil.1252");dadada 
+     setlocale(LC_ALL,"Portuguese_Brazil.1252");
 	
 	 printf ("--- Cartório da EBAC ---\n\n");
 	 printf ("ESCOLHA A OPÇÃO DESEJADA DO MENU: \n\n");
