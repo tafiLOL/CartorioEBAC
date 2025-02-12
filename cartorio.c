@@ -116,53 +116,73 @@ int deletar()
 
 
 int main()
-{ 
-	int opcao=0; // variavel opção para armazenar a escolha no menu
-	int menu=1;
+{
+ setlocale(LC_ALL,"Portuguese_Brazil.1252"); //colocando a localização dentro da main
+ int opcao=0; // variavel opção para armazenar a escolha no menu
+ int menu=1;
+ char senhadigitada[10]="a";
+ int comparacao;
+ 
+	printf("--- Cartório da EBAC ---\n\n");
+	printf("Login de administrador!\n\nDigite a sua senha:");
+	scanf("%s",senhadigitada);
 	
-	for(menu=1;menu=1;) // o LOOP sendo criado para sempre voltar para o MENU
-    {
-		system("cls"); //vai limpar a tela para retomar do começo
+	comparacao = strcmp(senhadigitada, "admin");	  
+	
+	if(comparacao == 0)
+	{
+	
+	 for(menu=1;menu=1;) // o LOOP sendo criado para sempre voltar para o MENU
+     {
+	 system("cls"); //vai limpar a tela para retomar do começo
 
-    	setlocale(LC_ALL,"Portuguese_Brazil.1252");
+     setlocale(LC_ALL,"Portuguese_Brazil.1252");dadada 
 	
-		printf ("--- Cartório da EBAC ---\n\n");
-		printf ("ESCOLHA A OPÇÃO DESEJADA DO MENU: \n\n");
-    	printf ("\t1 - Registrar nomes\n\n");
-    	printf ("\t2 - Consultar nomes\n\n");
-    	printf ("\t3 - Deletar nomes\n\n");
-    	printf ("\t4 - Sair do sistema\n\n");
-    	printf("Digite sua opção:");
+	 printf ("--- Cartório da EBAC ---\n\n");
+	 printf ("ESCOLHA A OPÇÃO DESEJADA DO MENU: \n\n");
+     printf ("\t1 - Registrar nomes\n\n");
+     printf ("\t2 - Consultar nomes\n\n");
+     printf ("\t3 - Deletar nomes\n\n");
+     printf ("\t4 - Sair do sistema\n\n");
+     printf ("Digite sua opção:");
     
-    	scanf ("%d", &opcao); // escaneia oque foi digitado e atribui á variavel opção
+    	 scanf ("%d", &opcao); // escaneia oque foi digitado e atribui á variavel opção
     
-    	system ("cls"); //limpa a tela para ir para as funçoes
+    	 system ("cls"); //limpa a tela para ir para as funçoes
     
-    	switch(opcao)
-    	{
+    	 switch(opcao)
+    	  {
     		case 1: // chamada das funçoes usando o CASE
-    			registro();
-    			break;
+    		registro();
+    		break;
     		
-    		case 2:
-    			consultar();
-    			break; // break para finalizar sempre
+    	 	case 2:
+    		consultar();
+    		break; // break para finalizar sempre
     			
     		case 3:
-    			deletar();
-				break;
+    		deletar();
+			break;
 				
 			case 4:
-				printf("Obrigado por acessar!");
-				return 0;
-				break;
+			printf("Obrigado por acessar!");
+			return 0;
+			break;
 				
 				
 			default: // default no CASE é como se fosse um NULL
 				printf("opção inexistente, tente novamente!\n");
 				system("pause");
     			break;
-    	}
-       	
+    	  }
+     }
     }
+    else
+	 {
+	  printf("\nSenha Incorreta!\n\n");
+      system("pause");
+      system("cls");
+      main();
+	 }
+      
 }
